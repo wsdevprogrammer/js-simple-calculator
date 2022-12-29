@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculator UI</title>
+</head>
+
+<body>
+    <div class="container">
+        <!-- calculator main container -->
+        <div class="calculator">
+            <!-- claculator header part -->
+            <div class="header">
+                <div class="time">
+                    <p id="time"></p>
+                </div>
+                <div class="other-right-icons">
+                    <p><i class="fa-solid fa-signal"></i></p>
+                    <p><i class="fa-solid fa-wifi"></i></p>
+                    <p><i class="fa-solid fa-battery-full"></i></p>
+                </div>
+            </div>
+            <!-- calcualtor body part -->
+            <div class="body_Upper">
+                <p><i class="fa-solid fa-moon"></i></p>
+                <p><i class="fa-solid fa-sun"></i></p>
+            </div>
+            <div class="body_center_output">
+                <input placeholder="0" id="inputText"></input>
+            </div>
+            <!-- calculator footer part container calculator container button etc -->
+            <div class="footer">
+                <div class="row_1">
+                    <p onclick="clr()" class="row_1_Icons" >AC</p>
+                    <p onclick="del()" class="row_1_Icons"><i class="fa-solid fa-plus-minus"></i></p>
+                    <p onclick="calculate('%')" class="row_1_Icons"><i class="fa-solid fa-percentage"></i></p>
+                    <p onclick="calculate('/')" class="row_1_Icons"><i class="fa-solid fa-divide"></i></p>
+                </div>
+                <div class="row_2">
+                    <button onclick="calculate(7)">7</button>
+                    <button onclick="calculate(8)">8</button>
+                    <button onclick="calculate(9)">9</button>
+                    <button onclick="calculate('*')" ><i class="fa-solid fa-multiply"></i></button>
+                </div>
+                <div class="row_3">
+                    <button onclick="calculate(4)">4</button>
+                    <button onclick="calculate(5)">5</button>
+                    <button onclick="calculate(6)">6</button>
+                    <button onclick="calculate('-')" ><i class="fa-solid fa-minus"></i></button>
+                </div>
+                <div class="row_4">
+                    <button onclick="calculate(3)">3</button>
+                    <button onclick="calculate(2)">2</button>
+                    <button onclick="calculate(1)">1</button>
+                    <button onclick="calculate('+')" ><i class="fa-solid fa-plus"></i></button>
+                </div>
+                <div class="row_5">
+                    <button onclick="clr()"><i class="fa-solid fa-rotate-left"></i></button>
+                    <button onclick="calculate(1)"><i class=""><strong>0</strong></i></button>
+                    <button onclick="calculate('.')"><strong>.</strong></button>
+                    <button onclick="result()"><i class="fa-solid fa-equals"></i></button>
+                </div>
+                <div class="row_6">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- js script -->
+    <script src="script.js"></script>
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/5448ef1fad.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

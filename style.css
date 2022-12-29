@@ -1,0 +1,212 @@
+:root{
+
+    /* dark theme color scheme */
+
+    --font-family: Verdana, Geneva, Tahoma, sans-serif;
+    --dark-background: #292D36;
+    --dark-footer-container-bg: #2A2C37;
+    --footer-box-shaodw: 2px 2px 12px 2px rgb(150 150 150 / 10%);
+    --box-shadow: 2px 12px 12px 12px rgba(179, 179, 179, 0.2);
+    --container-border-radius: 40px;
+    --footer-container-radius: 20px;
+    --normal-box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+    --dark-color-theme: #fff;
+    --dark-btn-bg: #212225;
+    --dark-btn-pimary-operator: turquoise;
+    --dark-btn-secodnary-operator: orange;
+    --footer-bg-light: #fff;
+
+    /* light color scheme */
+    --light-bg: #fff;
+    --light-footer-bg: #fff;
+    --light-font-color-theme: #292D36;
+    --footer-line-bg: var(--dark-background);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* main container */
+.container {
+    margin: 100px auto;
+}
+
+/* main calculator */
+.calculator {
+    margin: auto;
+    background-color: var(--dark-background);
+    color: white;
+    width: 340px;
+    border-radius: 15px;
+    box-shadow: var(--normal-box-shadow);
+}
+
+/* calculator head part */
+.header {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+/* time  */
+.header .time {
+    align-self: left;
+    padding: 0px 20px;
+    width: 50%;
+    font-family: var(--font-family);
+    opacity: 0.9;
+
+}
+
+/* top right icons  */
+.header .other-right-icons {
+    opacity: 0.7;
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.header .body_Upper.fa-moon p .fa-sun{
+    cursor: pointer;
+}
+/* calculator body */
+
+.body_Upper {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    background-color: var(--dark-background);
+    color: white;
+    width: 20%;
+    margin: 30px auto;
+    border-radius: 8px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* calculator moon and sun icon*/
+.body_Upper i {
+    margin: 0px 10px;
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+/* output */
+.body_center_output {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 15px;
+    margin: 0px 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+.body_center_output #inputText{
+    background: none;
+    outline: none;
+    /* border-radius: var(--container-border-radius); */
+    padding: 10px;
+    border: none;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 2.5rem;
+    width: 100%;
+}
+
+.body_center_output p,
+h2 {
+    margin: 12px 0px;
+}
+
+.body_center_output p {
+    opacity: 0.8;
+}
+
+.body_center_output p>span {
+    color: var(--dark-btn-pimary-operator);
+    opacity: 0.7;
+}
+
+/* footer Part Calculator Container and Buttons */
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--footer-container-bg);
+    box-shadow: var(--footer-box-shaodw);
+    padding: 30px;
+    border-radius: 40px 40px 17px 21px;
+
+
+}
+
+/* calculator buttons */
+.footer button {
+    background-color: var(--dark-btn-bg);
+    width: 10%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    padding: 10px;
+    margin: 10px auto;
+    border: none;
+    border-radius: 2px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+    color: white;
+    cursor: pointer;
+}
+
+.footer .row_1 p {
+    /* background-color: #343435; */
+    color: var(--dark-btn-pimary-operator);
+    padding: 10px;
+    margin: 10px auto;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 7px;
+
+}
+
+.row_1 p{
+    cursor: pointer;
+}
+
+.footer .row_1 button {
+    color: orange;
+}
+
+.footer .row_5 button {
+    color: var(--dark-btn-secodnary-operator);
+}
+
+.footer .row_2,
+.row_3,
+.row_4,
+.row_5 {
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer .row_1 {
+    display: flex;
+    justify-content: space-around;
+}
+
+.row_6 {
+    width: 50%;
+    height: 100px;
+    justify-content: center;
+    display: block;
+    justify-content: center;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: var(--box-shadow);
+    height: 5px;
+    background: white;
+    border-radius: 10px;
+    opacity: 0.1;
+}
