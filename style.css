@@ -21,6 +21,8 @@
     --light-footer-bg: #fff;
     --light-font-color-theme: #292D36;
     --footer-line-bg: var(--dark-background);
+
+    --main-bg: url(https://images.unsplash.com/photo-1472289065668-ce650ac443d2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80);
 }
 
 * {
@@ -29,11 +31,17 @@
     padding: 0;
 }
 
+body{
+    background: var(--main-bg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+}
 /* main container */
 .container {
     margin: 100px auto;
+   
 }
-
 /* main calculator */
 .calculator {
     margin: auto;
