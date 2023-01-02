@@ -11,10 +11,40 @@ let h2 = document.querySelectorAll( "h2" ).forEach( element => {
 let outuput = document.getElementById( 'inputText' );
 let dateAndTime = new Date();
 
-let time = document.getElementById( 'time' );
-time.innerText = dateAndTime.getHours() + ":" + dateAndTime.getMinutes();
-time.style.color='orange';
-time.style.fontWeight='bold';
+let timeHolder = document.getElementById( 'time' );
+
+function showTime(){
+    var date = new Date();
+    var h = date.getHours(); // 0 - 23
+    var m = date.getMinutes(); // 0 - 59
+    var s = date.getSeconds(); // 0 - 59
+    var session = "AM";
+    
+    if(h == 0){
+        h = 12;
+    }
+    
+    if(h > 12){
+        h = h - 12;
+        session = "PM";
+    }
+    
+    h = (h < 10) ? "0" + h : h;
+    m = (m < 10) ? "0" + m : m;
+    s = (s < 10) ? "0" + s : s;
+    
+    var time = h + ":" + m + ":" + s + " " + session;
+    document.getElementById("time").innerText = time;
+    document.getElementById("time").textContent = time;
+    timeHolder.style.color="#F1BB00";
+    timeHolder.style.fontWeight="bold";
+    setTimeout(showTime, 1000);
+    
+}
+
+showTime();
+
+
 
 let calculate = ( number ) => {
 
